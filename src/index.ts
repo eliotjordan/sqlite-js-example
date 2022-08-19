@@ -24,7 +24,7 @@ async function load() {
 
   // const result = await worker.db.query(`select Composer, count(*) as Counter from Track where Composer is not null group by Composer order by Counter`)
 
-  const result = await worker.db.query(`select Composer, Counter from TrackFacet order by Counter Desc LIMIT 10`)
+  const result = await worker.db.query(`select Composer, Counter from TrackFacet LIMIT 10`)
 ;
 
   document.body.textContent = JSON.stringify(result);
