@@ -22,9 +22,9 @@ async function load() {
     wasmUrl.toString()
   );
 
-  // const result = await worker.db.query(`select Composer, count(*) as Counter from Track where Composer is not null group by Composer order by Counter`);
+  // const result = await worker.db.query(`select Composer, count(*) as Counter from Track where Composer is not null group by Composer order by Counter`)
 
-  const result = await worker.db.query(`select Composer, Counter from TrackFacet order by Counter Desc`)
+  const result = await worker.db.query(`select Composer, Counter from TrackFacet order by Counter Desc LIMIT 10`)
 ;
 
   document.body.textContent = JSON.stringify(result);
