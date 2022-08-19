@@ -13,7 +13,7 @@ async function load() {
         from: "inline",
         config: {
           serverMode: "full",
-          url: "/Chinook.db",
+          url: "https://eliotjordan.github.io/sqlite-js-example/Chinook.db",
           requestChunkSize: 4096,
         },
       },
